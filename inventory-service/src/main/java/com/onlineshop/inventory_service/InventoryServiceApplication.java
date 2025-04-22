@@ -18,7 +18,7 @@ public class InventoryServiceApplication {
 		public CommandLineRunner loadData(InventoryRepository inventoryRepository ){
 
 		return args -> {
-			 System.out.println("=== CommandLineRunner is executing ===");
+			System.out.println("=== CommandLineRunner is executing ===");
 
 			Inventory inventory = new Inventory();
 			inventory.setSkuCode("iphone-13");
