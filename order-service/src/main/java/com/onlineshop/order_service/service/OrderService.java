@@ -29,7 +29,7 @@ public class OrderService {
 
 
 
-    public void placeOrder(OrderRequest orderRequest){
+    public String placeOrder(OrderRequest orderRequest){
 
         Order order = new Order();
 
@@ -58,6 +58,8 @@ public class OrderService {
         if (allProductInStock){
 
             orderRepository.save(order);
+
+            return "Order placed succesfully";
         }else {
 
             throw new IllegalArgumentException("Product is not in Stock");
